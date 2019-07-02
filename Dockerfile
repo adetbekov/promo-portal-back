@@ -17,5 +17,6 @@ RUN pip install pipenv==2018.10.13
 RUN set -ex && pipenv install --deploy --system
 RUN pip install django-cities-light
 RUN pip install uwsgi
+RUN pip install pymysql
 # docker-compose execの開始位置
 WORKDIR /app/promobackend/
