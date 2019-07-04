@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_URL = 'http://localhost:8000'
+BASE_URL = 'http://92.53.66.206:8000'
 
 
 # Application definition
