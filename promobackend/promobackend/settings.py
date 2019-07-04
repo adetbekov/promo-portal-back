@@ -145,7 +145,7 @@ STATIC_URL = '/static/'
 
 
 REST_USE_JWT = True
-SITE_ID = 1
+SITE_ID = 5
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
