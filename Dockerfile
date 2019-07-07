@@ -20,3 +20,6 @@ RUN pip install uwsgi
 RUN pip install psycopg2
 # docker-compose execの開始位置
 WORKDIR /app/promobackend/
+RUN ./manage.py makemigrations
+RUN ./manage.py migrate
+RUN ./manage.py migrate cities_light
