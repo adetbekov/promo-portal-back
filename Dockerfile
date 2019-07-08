@@ -13,13 +13,14 @@ FROM python:3
 ENV PYTHONUNBUFFERED 1
 COPY . /app
 WORKDIR /app
-RUN pip install pipenv==2018.10.13
+RUN pip install pipenv
 RUN set -ex && pipenv install --deploy --system
 RUN pip install django-cities-light
 RUN pip install uwsgi
 RUN pip install psycopg2
 # docker-compose execの開始位置
 WORKDIR /app/promobackend/
-RUN ./manage.py makemigrations
-RUN ./manage.py migrate
-RUN ./manage.py migrate cities_light
+RUN ls
+# RUN promobackend/manage.py makemigrations
+# RUN promobackend/manage.py migrate
+# RUN promobackend/manage.py migrate cities_light
